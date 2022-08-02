@@ -1,0 +1,32 @@
+<p align="center">PRODUCT AVAILABLE</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center"> 
+        <th>PRODUCT ID</th>
+        <th>SKU</th>
+        <th>PRODUCT NAME</th>
+        <th>DESCRIPTION</th>
+        <th>UNIT PRICE</th>
+        <th>IMAGE URL</th>
+        <th>UNITS OF STOCK</th>
+        <th>DATE CREATED</th>
+        <th>LAST UPDATED</th>
+        <th>CATEGORY ID</th>
+       </tr>
+
+       <tr *ngFor = "let pro of products " align="center">
+           <td> {{pro.id}}</td>
+           <td> {{pro.sku}}</td>
+           <td> {{pro.name}}</td>
+           <td> {{pro.description}}</td>
+           <td> {{pro.unitprice | currency :'INR'}}</td>
+           <td> <img src="{{pro.imageurl}}" alt="wait"></td>
+           <td> {{pro.unitsofstock}}</td>
+           <td> {{pro.datecreated}}</td>
+           <td> {{pro.lastupdated}}</td>
+           <td> {{pro.categoryid}}</td>
+                      
+       </tr>
+    </table>
+    </div>
+  

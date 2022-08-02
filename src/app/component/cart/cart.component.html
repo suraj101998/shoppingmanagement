@@ -1,0 +1,58 @@
+<p align="center">CART DETAILS</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center">
+        <th>ID</th>
+        <th>IMAGE URL</th>
+        <th>NAME</th>
+        <th>UNIT PRICE</th>
+
+       </tr>
+
+       <tr *ngFor = "let cat of buyers " align="center" >
+        <td> {{cat.id}}</td>
+        <td><img src="{{cat.imageurl}}" alt="wait"></td>
+        <td> {{cat.name}}</td>
+        <td> {{cat.unitprice}}</td>             
+    </tr>
+
+</table>
+</div>
+<p class="head" align="center">ADD TO CART</p>
+<div class="form-container">
+<form class="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-sm-3"><label>ID</label></div>
+        <div class="col-sm-3"><input type="text" name="id" [(ngModel)]="formModel.id"></div>
+    </div>
+    &nbsp;             
+
+    <div class="row">
+        <div class="col-sm-3"><label>IMAGE URL</label></div>
+        <div class="col-sm-3"><input type="text" name="imageurl" [(ngModel)]="formModel.imageurl"></div>
+    </div>
+    &nbsp;             
+
+    <div class="row">
+        <div class="col-sm-3"><label>NAME</label></div>
+        <div class="col-sm-3"><input type="text" name="name" [(ngModel)]="formModel.name"></div>
+    </div>
+    &nbsp;             
+
+    <div class="row">
+        <div class="col-sm-3"><label>UNIT PRICE</label></div>
+        <div class="col-sm-3"><input type="text" name="unitprice" [(ngModel)]="formModel.unitprice"></div>
+    </div>
+    &nbsp;
+
+    <div class="row">
+        <div class="col-sm-3"><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+        <a class= " home" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+    </div>
+
+</form>
+</div>
+<div align="center">
+    <p class="details">****************All Copyrights Reserved****************</p>
+</div>
+
